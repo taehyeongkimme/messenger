@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="500.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kh.messenger.client2.MessengerMainController">
+	<top>
+		<VBox prefHeight="64.0" prefWidth="250.0" stylesheets="@messenger.css" BorderPane.alignment="CENTER">
+			<children>
+				<MenuBar stylesheets="@messenger.css">
+					<menus>
+						<Menu mnemonicParsing="false" text="친구관리">
+							<items>
+								<MenuItem mnemonicParsing="false" onAction="#findFriend" text="친구찾기">
+								<graphic>
+										<ImageView>
+											<image>
+												<Image url="@images/search.png" />
+											</image>
+										</ImageView>
+									</graphic>
+								</MenuItem>
+								<MenuItem mnemonicParsing="false" onAction="#handleAddFriend" text="친구추가">
+									<accelerator>
+										<KeyCodeCombination alt="UP" code="N" control="UP" meta="UP" shift="DOWN" shortcut="UP" />
+									</accelerator>
+									<graphic>
+										<ImageView>
+											<image>
+												<Image url="@images/add_friend.png" />
+											</image>
+										</ImageView>
+									</graphic>
+								</MenuItem>
+								<MenuItem mnemonicParsing="false" onAction="#handleDelFriend" text="친구삭제">
+								<graphic>
+										<ImageView>
+											<image>
+												<Image url="@images/trash.png" />
+											</image>
+										</ImageView>
+									</graphic>
+								</MenuItem>
+								<SeparatorMenuItem />
+								<MenuItem mnemonicParsing="false" onAction="#handleMessengerExit" text="로그아웃">
+									<accelerator>
+										<KeyCodeCombination alt="UP" code="Q" control="UP" meta="UP" shift="DOWN" shortcut="UP" />
+									</accelerator>
+									<graphic>
+										<ImageView>
+											<image>
+												<Image url="@images/logout.png" />
+											</image>
+										</ImageView>
+									</graphic>
+								</MenuItem>
+							</items>
+						</Menu>
+						<Menu mnemonicParsing="false" text="내정보">
+							<items>
+								<MenuItem mnemonicParsing="false" onAction="#memberOut" text="회원탈퇴">
+									<graphic>
+										<ImageView>
+											<image>
+												<Image url="@images/memout.png" />
+											</image>
+										</ImageView>
+									</graphic>
+								</MenuItem>
+							</items>
+						</Menu>
+						
+					</menus>
+				</MenuBar>
+            <Separator prefWidth="200.0" />
+				<ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="250.0">
+					<items>
+						<Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleMessengerExit" prefWidth="40.0" styleClass="btn">
+							<graphic>
+										<ImageView>
+											<image>
+												<Image url="@images/logout.png" />
+											</image>
+										</ImageView>
+									</graphic>
+						</Button>
+						<Button alignment="CENTER" mnemonicParsing="false" onAction="#handleDelFriend" prefWidth="40.0" styleClass="btn">
+									<graphic>
+										<ImageView>
+											<image>
+												<Image url="@images/trash.png" />
+											</image>
+										</ImageView>
+									</graphic>
+						</Button>
+						<Button alignment="CENTER" mnemonicParsing="false" onAction="#findFriend" prefWidth="40.0" styleClass="btn">
+						<graphic>
+										<ImageView>
+											<image>
+												<Image url="@images/search.png" />
+											</image>
+										</ImageView>
+									</graphic>
+						</Button>
+					</items>
+				</ToolBar>
+			</children>
+		</VBox>
+	</top>
+   <center>
+      <TabPane BorderPane.alignment="CENTER">
+         <tabs>
+            <Tab closable="false" text="친구들">
+               <content>
+                  <TreeTableView fx:id="ttv" prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                      <TreeTableColumn fx:id="ttcNickName" text="대화명" />
+                      <TreeTableColumn fx:id="ttcEmail" prefWidth="99.0" text="이메일" />
+                        <TreeTableColumn fx:id="ttcGender" minWidth="7.0" prefWidth="28.0" text="성별" />
+                        <TreeTableColumn fx:id="ttcAge" minWidth="9.0" prefWidth="29.0" text="나이" />
+                        <TreeTableColumn fx:id="ttcRegion" prefWidth="30.0" text="지역" />
+                        <TreeTableColumn fx:id="ttcTel" prefWidth="128.0" text="연락처" />
+                    </columns>
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem mnemonicParsing="false" onAction="#handleAddFriend" text="친구추가" />
+                              <MenuItem mnemonicParsing="false" onAction="#handleDelFriend" text="친구삭제" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
+                  </TreeTableView>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </center>
+   <bottom>
+      <VBox prefHeight="40.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+         <children>
+            <Separator prefHeight="0.0" prefWidth="400.0" stylesheets="@messenger.css" />
+      		<HBox prefHeight="98.0" prefWidth="400.0" stylesheets="@messenger.css">
+               <children>
+                  <Label fx:id="lblLoginId" alignment="CENTER_RIGHT" prefHeight="37.0" prefWidth="548.0" styleClass="red" />
+               </children></HBox>
+         </children>
+      </VBox>
+   </bottom>
+</BorderPane>

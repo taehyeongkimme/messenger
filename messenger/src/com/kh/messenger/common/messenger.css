@@ -1,0 +1,145 @@
+
+/* 전체 Label */
+Label{
+	-fx-font-family:"나눔고딕";
+	-fx-font-weight:bold;
+	-fx-text-fill:#566270;
+}
+
+Label.main{
+	-fx-font-family:"나눔고딕";
+	-fx-font-weight:bold;
+	-fx-font-size:18.0pt;
+	-fx-padding:5.0;
+	-fx-background-color:#d9e1e8;
+	-fx-text-fill:#566270;
+}
+
+Label.lblClass{
+	-fx-font-family:"나눔고딕";
+	-fx-font-weight:bold;
+	-fx-font-size:10.0pt;
+	-fx-padding:5.0;
+	-fx-background-color:#d9e1e8;
+	-fx-text-fill:#566270;
+}
+
+Label.lblClass3{
+	-fx-font-family:"나눔고딕";
+	-fx-font-weight:bold;
+	-fx-font-size:14.0pt;
+	-fx-padding:5.0;
+	-fx-background-color:#d9e1e8;
+	-fx-text-fill:#566270;
+}
+
+Label.lblClass2{
+	-fx-padding:5.0;
+	-fx-background-color:#d9e1e8;
+	-fx-font-family:"나눔고딕";
+	-fx-text-fill:#566270;
+	-fx-font-weight:bold;
+	-fx-border-insets:0.0,2.0;
+	-fx-border-color:#566270,#566270;
+	-fx-border-width:1.0,1.0;
+}
+
+
+/* 전체 Button */
+Button{
+	-fx-padding:5.0;
+	-fx-font-family:"나눔고딕";
+	-fx-font-weight:bold;
+	-fx-background-color:#566270;
+	-fx-text-fill:#FFFFFF;	
+}
+
+Button:pressed{
+	-fx-font-family:"나눔고딕";
+	-fx-font-weight:bold;
+	-fx-background-color:#A593E0;
+}
+
+Button.btn{
+	-fx-padding:5.0;
+	-fx-font-family:"나눔고딕";
+	-fx-font-weight:bold;
+	-fx-background-color:#d9e1e8;
+	-fx-text-fill:#566270;	
+	-fx-border-color:#566270;
+	-fx-border-width:2.0;
+}
+
+Button.btn:pressed{
+	-fx-font-family:"나눔고딕";
+	-fx-font-weight:bold;
+	-fx-background-color:#A593E0;
+}
+
+/*Button:focused{
+	-fx-background-color:coral;
+	-fx-border-color:skyblue;	
+}*/
+
+/*Button:hover{
+	-fx-background-color:orange;
+	-fx-border-color:green;	
+}*/
+
+
+#lblMsg{
+	-fx-padding:5.0;
+	-fx-background-color:#d9e1e8;
+	-fx-font-size:12.0pt;
+	-fx-font-family:"나눔고딕";
+	-fx-font-weight:bold;
+	-fx-text-fill:#566270;
+}
+
+MenuBar{
+	-fx-background-color:#d9e1e8;
+	-fx-text-fill:#566270;
+}
+
+ToolBar{
+	-fx-background-color:#d9e1e8;
+	-fx-text-fill:#566270;
+}
+
+Separator{
+	-fx-background-color:#566270;
+}
+
+
+GridPane{
+	-fx-background-color:#d9e1e8;
+}
+
+BorderPane.borderpane{
+	-fx-background-color:#d9e1e8;
+}
+
+HBox{
+	-fx-background-color:#d9e1e8;
+}
+VBox{
+	-fx-background-color:#d9e1e8;
+}
+
+
+TextField{
+	-fx-background-color:#FFFFFF;
+/* 	-fx-prompt-text-fill:linear-gradient(#A593E0); 
+ 	-fx-background-color:rgba(250,233,255,0.5); 
+	-fx-background-radius:10;
+	-fx-border-radius:10; */
+}
+
+PasswordField{
+	-fx-background-color:#FFFFFF;
+/* 	-fx-background-radius:10;
+	-fx-border-radius:10; */
+}
+
+	
+

@@ -1,0 +1,75 @@
+
+/* 전체 Label */
+Label{
+	-fx-padding:5;
+	-fx-background-color:yellow;
+	-fx-text-fill:black;
+}
+
+Label.lblClass{
+	-fx-padding:5;
+	-fx-background-color:white;
+	-fx-text-fill:tomato;
+}
+
+Label.lblClass2{
+	-fx-padding:5;
+	-fx-background-color:mistyrose;
+	-fx-text-fill:purple;
+	-fx-border-insets:0,2;
+	-fx-border-color:red,green;
+	-fx-border-width:0.5,0.5;
+}
+
+/* 전체 Button */
+Button{
+	-fx-padding:5;
+	-fx-background-color:hotpink;
+	-fx-text-fill:white;	
+}
+
+Button:focused{
+	-fx-background-color:coral;
+	-fx-border-color:skyblue;	
+}
+
+Button:hover{
+	-fx-background-color:orange;
+	-fx-border-color:green;	
+}
+
+Button:pressed{
+	-fx-background-color:darkred;
+	-fx-border-color:blue;	
+}
+
+#lblMsg{
+	-fx-padding:5;
+	-fx-background-color:white;
+	-fx-font-size:12pt;
+	-fx-font-family:"monospace";
+	-fx-text-fill:red;
+	-fx-font-weight:bold;
+	-fx-font-style:italic;
+}
+
+GridPane{
+	-fx-background-color:white;
+}
+
+TextField{
+	-fx-prompt-text-fill:linear-gradient(darkred, lightpink);
+	-fx-background-color:#D2E4F8;
+	/* -fx-background-color:rgba(250,233,255,0.5); */
+	-fx-background-radius:10;
+	-fx-border-color:tomato;
+	-fx-border-radius:10;
+}
+
+PasswordField:focused{
+	-fx-background-color:papayawhip;
+	-fx-border-color:skyblue;	
+	-fx-background-radius:10;
+	-fx-border-color:tomato;
+	-fx-border-radius:10;
+}
