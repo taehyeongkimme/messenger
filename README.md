@@ -22,7 +22,6 @@ JAVA를 이용한 메신저 구현
 ------------------
 * java/javaFx, Client/Server, 3-Tier, P2P, connection pool, oracle, MVC패턴적용
 
- 정보
+ 동영상시연
 ------------------
-* Java socket통신 메신저 프로그램
-
+https://youtu.be/pCvYZVnop30
