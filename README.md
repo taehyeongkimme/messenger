@@ -25,7 +25,7 @@ JAVA를 이용한 메신저 구현
  정보
 ------------------
 * Java socket통신 메신저 프로그램
-* view는 javaFX 통해 구현 /server는 3-tier방식 (쓰레드풀로 구현)
+
 
 <hr>
 
